@@ -67,6 +67,11 @@ fi
 [ -d ~/Library/Haskell/bin ] && PATH=$PATH:~/Library/Haskell/bin
 [ -d ~/.local/bin ] && PATH=$PATH:~/.local/bin
 
+# Tidy for Mac OS X by balthisar.com is adding the new path for Tidy.
+export PATH=/usr/local/bin:$PATH
+
+# Anaconda3 stuff please
+[ -d ~/anaconda3 ] && PATH="~/anaconda3/bin:$PATH"
 
 # Export all the things we've set up above
 export JAVA_HOME=/opt/jdk17
