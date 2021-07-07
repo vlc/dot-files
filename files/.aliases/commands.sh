@@ -39,16 +39,9 @@ fi
 if [ -f "/Applications/MacVim.app/Contents/MacOS/Vim" ]; then
   alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 fi
+[[ $(command -v "bat") ]] && alias cat="bat --theme ansi-light"
 
 alias vi='vim'
-
-alias b="./build.sh"
-alias sci="svn ci"
-alias sup="svn up"
-alias sst="svn st"
-alias ss="svn st"
-alias sd="svn diff | less"
-
 
 RUBY_NUMERIC_ARRAY_STR='ruby -e "load \"~/.dot-files/stats.rb\"; p ARGF.select{|e| e =~ /^\s*[+-]?\d+[.]?\d*/ }.map { |e| e.to_f }'
 alias min='ruby -e "p ARGF.select{|e| e =~ /^\s*[+-]?\d+[.]?\d*/ }.map{|e| e.to_f }.min"'
@@ -58,8 +51,6 @@ alias mean='ruby -e "tmp = ARGF.select{|e| e =~ /^\s*[+-]?\d+[.]?\d*/ }.map{|e| 
 alias var="${RUBY_NUMERIC_ARRAY_STR}.sum\""
 
 export LESS="-R"
-
-alias screen='byobu'
 
 source_if_exists()
 {
