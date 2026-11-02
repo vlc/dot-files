@@ -27,7 +27,7 @@ You'll also need to do some extra setup for vim and the associated bundles
 
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-2. From vim run :BundleInstall
+2. From vim run :BundleInstall.
 
 
 
